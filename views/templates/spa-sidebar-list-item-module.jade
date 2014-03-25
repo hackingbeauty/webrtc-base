@@ -1,0 +1,6 @@
+script#spa-sidebar-list-item-module(type='text/x-handlebars-template')
+  {{#if conversation.conversationName}}
+  li
+    h5.title
+      a(href='#') {{ conversation.conversationName }}
+  {{/if}}

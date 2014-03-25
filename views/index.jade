@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	.row
+		if everyauth.user
+			.col-lg-2
+				#spa-sidebar
+					.module
+						.panel.panel-default
+							.panel-body
+								if everyauth.user
+									a(href='#')
+										img(src='https://graph.facebook.com/#{everyauth.user.fb.name.first}.#{everyauth.user.fb.name.last}/picture?type=normal')
+									.section-container.vertical-nav(data-section='data-section', data-options='deep_linking: false; one_up: true')
+										p Your Conversations:
+										ul#spa-current-user-conversation-list
+		.col-lg-10
+			div#spa-container
+				ul#spa-conversation-list   
+			
+	script
+		$(function () { spa.initModule( $('#spa-container') ); });
+

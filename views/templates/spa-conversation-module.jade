@@ -1,0 +1,20 @@
+script#spa-conversation-module(type='text/x-handlebars-template')
+	.row
+		.col-lg-12
+			#spa-conversation-form
+				.spa-conversation-head
+					.spa-conversation-head-toggle.tp-sound-click
+					.spa-conversation-head-title
+				| Create a Conversation
+				.spa-conversation-closer.tp-sound-click x
+				.spa-conversation-sizer
+					.spa-conversation-list
+					.spa-conversation-list-box
+					.spa-conversation-body
+						h3 What do you want to talk about?
+						form.spa-conversation-msg-form(action="/conversation/create" method="post")
+							label Give your Conversation a title
+							input(type="text" name="spa-conversation-title" class="spa-conversation-title")
+							label Desribe your Conversation
+							textarea(name="spa-conversation-description" class="spa-conversation-description")
+							input.btn.btn-primary.spa-conversation-msg-send.button(type="submit" value="Create a Conversation")

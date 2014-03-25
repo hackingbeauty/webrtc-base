@@ -1,0 +1,75 @@
+/*
+ * spa.conversation.css
+ * Chat feature styles
+*/
+#spa-conversation-form {
+  position: fixed;
+  bottom: 0;
+  height: 2em;
+  background: #fff;
+  border-radius: 0.3em 0.3em 0 0;
+  border-style: solid;
+  border-width: thin 0 0 thin;
+  border-color: #888;
+  box-shadow: 0 0 0.75em 0 #888;
+  z-index: 1;
+}
+.spa-conversation-head,
+.spa-conversation-closer {
+  position: absolute;
+  top: 0;
+  height: 2em;
+  line-height: 1.8em;
+  border-bottom: thin solid #888;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+  font-family: arial, helvetica, sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+.spa-conversation-head {
+  left: 0;
+  right: 2em;
+  border-radius: 0.2em 0 0 0;
+  width: 100%;
+}
+.spa-conversation-closer {
+  right: 0;
+  width: 2em;
+  border-radius0: 0.3em 0 0;
+}
+.spa-conversation-closer .spa-conversation-closerhover {
+  background: #800;
+}
+.spa-conversation-head-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2em;
+  bottom: 0;
+}
+.spa-conversation-body {
+  height: 100%;
+  padding: 20px;
+  margin-top: 15px;
+}
+.spa-conversation-body h3 {
+  margin: -10px 0 20px 0;
+}
+.spa-conversation-body label {
+  display: block;
+}
+.spa-conversation-body input,
+.spa-conversation-body textarea {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.spa-conversation-item {
+  background: inherit;
+  padding-top: 12px;
+  padding: 5px;
+}
+.spa-conversation-description {
+  height: 100px;
+}
