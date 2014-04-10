@@ -1,0 +1,13 @@
+script#spa-call-modal-module(type='text/x-handlebars-template')
+	.modal.fade#spa-call-modal
+		.modal-dialog
+			.modal-content
+				.modal-header
+					button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+					h4.modal-title Waiting to start: {{conversationName}}
+				.modal-body
+					.videoContainer
+						video#localVideo(style='height: 150px;', oncontextmenu='return false;')
+						#localVolume.volume_bar
+				.modal-footer
+					button.btn.btn-default(type='button', data-dismiss='modal') Hang Up

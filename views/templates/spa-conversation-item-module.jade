@@ -1,0 +1,18 @@
+script#spa-conversation-item-module(type='text/x-handlebars-template')  
+	li.spa-conversation-item('data-conversation-id')
+		.row
+			ul.spa-conversation-user-data
+				li.image.col-lg-1.col-xs-12
+					a(href='https://graph.facebook.com/{{conversation.userID}}')
+					img(src='https://graph.facebook.com/{{conversation.userID}}/picture?type=small')
+				li.spa-conversation-name.col-lg-4.col-xs-12
+					= "I want to talk about: "
+					strong {{conversation.conversationName}}
+				li.col-lg-2.col-xs-12 {{ conversation.userName }}
+				li.col-lg-3.col-xs-12 {{ conversation.timeAgo }}
+				li.col-lg-2.col-xs-12
+					{{#if currentUserCreated}}
+					= "Waiting..."
+					{{else}}
+					a.join_conversation(href='{{conversation.conversationID}}') Join Conversation
+					{{/if}}

@@ -1,0 +1,6 @@
+script#spa-sidebar-list-module(type='text/x-handlebars-template')
+  {{#each currUserConversations}}
+  li
+    h5.title
+      a(href='#') {{ conversationName }}
+  {{/each}}

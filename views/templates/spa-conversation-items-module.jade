@@ -1,0 +1,16 @@
+script#spa-conversation-items-module(type='text/x-handlebars-template')  
+	{{#each conversations}} 
+	li.spa-conversation-item
+		.row
+			ul.spa-conversation-user-data
+				li.image.col-lg-1.col-xs-12
+					a(href='https://graph.facebook.com/{{this.userID}}')
+						img(src='https://graph.facebook.com/{{this.userID}}/picture?type=small')
+				li.spa-conversation-name.col-lg-4.col-xs-12
+					= "I want to talk about: " 
+					strong {{conversationName}}
+				li.col-lg-2.col-xs-12 {{ this.userName }}
+				li.col-lg-3.col-xs-12 {{ this.creationDate }}
+				li.col-lg-2.col-xs-12
+					a.join_conversation(href='{{conversationID}}') Join Conversation
+	{{/each}}
